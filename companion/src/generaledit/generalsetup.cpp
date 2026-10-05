@@ -273,6 +273,7 @@ enum RadioLanguage {
   LANG_SK,
   LANG_TW,
   LANG_UA,
+  LANG_VI,
   LANG_COUNT
 };
 
@@ -300,6 +301,7 @@ static const char* langStrings[][2] = {
   { "Slovak", "sk" },
   { "Taiwanese", "tw" },
   { "Ukrainian", "ua" },
+  { "Tiếng Việt", "vi" }
 };
 
 void GeneralSetupPanel::populateVoiceLangCB(QComboBox* b, const char* currLang)
@@ -339,6 +341,7 @@ void GeneralSetupPanel::populateTextLangCB(QComboBox* b, const char* currLang, b
     // LANG_SK,   // no translation file
     // LANG_TW,   // no fonts
     LANG_UA,
+    // LANG_VI,   // no fonts
     LANG_COUNT
   };
   // Color
@@ -364,6 +367,7 @@ void GeneralSetupPanel::populateTextLangCB(QComboBox* b, const char* currLang, b
     // LANG_SK,   // no translation file
     LANG_TW,
     LANG_UA,
+    LANG_VI,
     LANG_COUNT
   };
 

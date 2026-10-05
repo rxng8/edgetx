@@ -377,8 +377,8 @@ void generalDefault()
   g_eeGeneral.inactivityTimer = 10;
 
   generalDefaultUILanguage();
-  g_eeGeneral.ttsLanguage[0] = 'e';
-  g_eeGeneral.ttsLanguage[1] = 'n';
+  g_eeGeneral.ttsLanguage[0] = 'v';
+  g_eeGeneral.ttsLanguage[1] = 'i';
   g_eeGeneral.wavVolume = 2;
   g_eeGeneral.backgroundVolume = 1;
 

@@ -58,6 +58,8 @@
 #include "translations/i18n/tw.h"
 #elif defined(TRANSLATIONS_UA)
 #include "translations/i18n/ua.h"
+#elif defined(TRANSLATIONS_VI)
+#include "translations/i18n/vi.h"
 #else
 #include "translations/i18n/en.h"
 #endif
@@ -95,7 +97,7 @@ bool isTextLangAvail(int lang)
   // Skip languages with no translation files or no unicode fonts
   return lang != LANG_CN && lang != LANG_HE && lang != LANG_HU &&
          lang != LANG_JP && lang != LANG_KO && lang != LANG_SK &&
-         lang != LANG_TW;
+         lang != LANG_TW && lang != LANG_VI;
 #endif
 }
 
@@ -123,6 +125,7 @@ const LangStrings* const langStrings[] = {
   &enLangStrings,
   &twLangStrings,
   &uaLangStrings,
+  &viLangStrings,
 };
 #else
 const LangStrings* const langStrings[] = {
@@ -147,6 +150,7 @@ const LangStrings* const langStrings[] = {
   &enLangStrings,
   &enLangStrings,
   &uaLangStrings,
+  &enLangStrings,
 };
 #endif
 const LangStrings* currentLangStrings = &enLangStrings;

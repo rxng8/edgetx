@@ -45,6 +45,15 @@ def getBuiltinHeaderPath(library_path):
         "/usr/lib/clang"
     ]
 
+    # Python wheels bundle libclang but may omit its builtin headers.
+    for base_dir in ["/usr/lib", "/usr/local/lib"]:
+        if os.path.isdir(base_dir):
+            llvm_dirs = sorted(
+                (name for name in os.listdir(base_dir) if name.startswith("llvm-")),
+                key=natural_sort_key, reverse=True)
+            knownPaths.extend(os.path.join(base_dir, name, "lib", "clang")
+                              for name in llvm_dirs)
+
     for path in knownPaths:
         try:
             subDirs = [f for f in os.listdir(path) if os.path.isdir(path + "/" + f)]
@@ -86,6 +95,8 @@ def findLibClang():
         version_paths.sort(key=lambda x: natural_sort_key(x[0]), reverse=True)
         knownPaths = [path for _, path in version_paths]
         knownPaths.extend(["/usr/local/lib", "/usr/lib", "/usr/lib64"])
+        if Config.library_path:
+            knownPaths.insert(0, Config.library_path)
         
         libSuffix = ".so"
     elif sys.platform == "win32" or sys.platform == "msys":
