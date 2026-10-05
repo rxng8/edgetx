@@ -94,6 +94,9 @@ FONT_TABLE(ru)
 #elif defined(TRANSLATIONS_UA)
 FONT_TABLE(ua)
 #define ENABLE_FALLBACK
+#elif defined(TRANSLATIONS_VI)
+FONT_TABLE(vi)
+#define ENABLE_FALLBACK
 #else
 FONT_TABLE(en)
 #endif
@@ -216,6 +219,7 @@ FONT_TABLE(ko);
 FONT_TABLE(he);
 FONT_TABLE(ru);
 FONT_TABLE(ua);
+FONT_TABLE(vi);
 
 } // extern "C"
 
@@ -242,6 +246,7 @@ etxLvglFont* etxFonts[] = {
   en_fontTable,
   tw_fontTable,   // TW
   ua_fontTable,   // UA
+  vi_fontTable,   // VI
 };
 
 etxLvglFont* fontTable = en_fontTable;
@@ -313,6 +318,7 @@ void initFontBuffers()
         he_fontTable[i].lvglFont = (lv_font_t*)b;
         ru_fontTable[i].lvglFont = (lv_font_t*)b;
         ua_fontTable[i].lvglFont = (lv_font_t*)b;
+        vi_fontTable[i].lvglFont = (lv_font_t*)b;
         b += getMaxFontSize(i);
       }
     }

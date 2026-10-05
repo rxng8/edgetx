@@ -66,9 +66,10 @@ get_translation_symbols() {
     KO_SYMBOLS=$(python3 get_char_ko.py "${TRANSLATIONS_DIR}/ko.h" 2>/dev/null || echo "")
     RU_SYMBOLS=$(python3 get_char_cyrillic.py "${TRANSLATIONS_DIR}/ru.h" 2>/dev/null || echo "")
     UA_SYMBOLS=$(python3 get_char_cyrillic.py "${TRANSLATIONS_DIR}/ua.h" 2>/dev/null || echo "")
+    VI_SYMBOLS=$(python3 get_char_vi.py "${TRANSLATIONS_DIR}/vi.h" 2>/dev/null || echo "")
 
     # Export variables for later use
-    export TW_SYMBOLS CN_SYMBOLS JP_SYMBOLS HE_SYMBOLS KO_SYMBOLS RU_SYMBOLS UA_SYMBOLS
+    export TW_SYMBOLS CN_SYMBOLS JP_SYMBOLS HE_SYMBOLS KO_SYMBOLS RU_SYMBOLS UA_SYMBOLS VI_SYMBOLS
 }
 
 function compress_font() {
@@ -326,6 +327,7 @@ main() {
     make_font_set "he" "Arimo/Arimo-Regular.ttf" "Arimo/Arimo-Bold.ttf" "${HE_SYMBOLS}" "-DNO_KERN"
     make_font_set "ru" "Arimo/Arimo-Regular.ttf" "Arimo/Arimo-Bold.ttf" "${RU_SYMBOLS}" ""
     make_font_set "ua" "Arimo/Arimo-Regular.ttf" "Arimo/Arimo-Bold.ttf" "${UA_SYMBOLS}" ""
+    make_font_set "vi" "Roboto/Roboto-Regular.ttf" "Roboto/Roboto-Bold.ttf" "${VI_SYMBOLS}" ""
     make_font_set "ko" "Nanum/NanumBarunpenR.ttf" "Nanum/NanumBarunpenB.ttf" "${KO_SYMBOLS}" "-DNO_KERN"
 
     # Clean up temporary files
