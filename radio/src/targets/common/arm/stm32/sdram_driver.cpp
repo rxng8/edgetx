@@ -80,6 +80,8 @@ extern "C" void SDRAM_GPIOConfig(void)
     | PH3 <-> FMC_SDNE0 | PH6 <-> FMC_SDNE1  |
     | PH5 <-> FMC_SDNWE |                    |
     +-------------------++-------------------+
+    PG4 → FMC_BA0
+    PG5 → FMC_BA1
   */
 
 #if defined(SDRAM_BANK1)

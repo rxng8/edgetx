@@ -618,9 +618,11 @@
   #define PWR_SWITCH_GPIO               GPIO_PIN(GPIOJ, 0) // PJ.00
 #endif
 
-// USB Charger
+// USB Charger (used for displaying the charging icon)
 #if defined(USB_CHARGER)
+  // Low = charging, High = not charging
   #define USB_CHARGER_GPIO              GPIO_PIN(GPIOG, 11) // PG.11
+  // High = USB connected, Low = USB not connected
   #define USB_USBDet_GPIO               GPIO_PIN(GPIOG, 13) // PG.13
 #endif
 
@@ -829,7 +831,7 @@
 #define DMA_SCREEN_IRQ_PRIO             6
 #endif
 
-// Backlight
+// LCD Backlight
 #if defined(PCBX12S)
   #if PCBREV >= 13
     #define BACKLIGHT_TIMER               TIM5
@@ -1039,6 +1041,8 @@
   // FlySky Hall Sticks
   #define FLYSKY_HALL_SERIAL_USART                 UART4
   #define FLYSKY_HALL_DMA_Channel                  LL_DMA_CHANNEL_4
+  #define FLYSKY_HALL_SERIAL_TX_GPIO               GPIO_PIN(GPIOA, 0) // PA.00
+  #define FLYSKY_HALL_SERIAL_RX_GPIO               GPIO_PIN(GPIOA, 1) // PA.01
   #define FLYSKY_HALL_SERIAL_TX_GPIO               GPIO_PIN(GPIOA, 0) // PA.00
   #define FLYSKY_HALL_SERIAL_RX_GPIO               GPIO_PIN(GPIOA, 1) // PA.01
   #define FLYSKY_HALL_SERIAL_USART_IRQn            UART4_IRQn
