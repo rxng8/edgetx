@@ -21,3 +21,4 @@ CMakeUserPresets.json
 output/
 *.dmg
 .devcontainer/devcontainer-lock.json
+**__pycache__
