@@ -69,6 +69,7 @@ enum RadioLanguage {
   LANG_SK,
   LANG_TW,
   LANG_UA,
+  LANG_VI,
   LANG_COUNT
 };
 
@@ -93,6 +94,7 @@ extern const LanguagePack seLanguagePack;
 extern const LanguagePack skLanguagePack;
 extern const LanguagePack twLanguagePack;
 extern const LanguagePack uaLanguagePack;
+extern const LanguagePack viLanguagePack;
 extern const LanguagePack * const languagePacks[];
 
 #if defined(LANGUAGE_PACKS_DEFINITION)
@@ -119,6 +121,7 @@ const LanguagePack * const languagePacks[] = {
   &skLanguagePack,
   &twLanguagePack,
   &uaLanguagePack,
+  &viLanguagePack,
   NULL
 };
 #endif

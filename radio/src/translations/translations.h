@@ -74,6 +74,7 @@ extern const LangStrings ruLangStrings;
 extern const LangStrings seLangStrings;
 extern const LangStrings twLangStrings;
 extern const LangStrings uaLangStrings;
+extern const LangStrings viLangStrings;
 
 extern const LangStrings* const langStrings[];
 extern const LangStrings* currentLangStrings;

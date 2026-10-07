@@ -290,7 +290,10 @@ uint8_t bluetoothIsWriting();
 void bluetoothDisable();
 
 #if defined(RADIO_TX16S) || defined(RADIO_F16) || defined(RADIO_V16)
-  #define BATTERY_DIVIDER 1495
+  // NOTE: Viet Dung Nguyen: I had different voltage divider values
+  // #define BATTERY_DIVIDER 1495
+  #define VBAT_DIV_R1       100  // kOhms
+  #define VBAT_DIV_R2       10  // kOhms
 #else
   #define BATTERY_DIVIDER 1629
 #endif

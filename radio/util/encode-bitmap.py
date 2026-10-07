@@ -148,6 +148,7 @@ class ImageEncoder:
         self.encode_end()
 
     def encode_4_4_4_4(self, image):
+        image = image.convert(mode='RGBA')
         width, height = image.size
         self.write_size(width, height)
         for y in range(height):
