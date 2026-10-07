@@ -557,6 +557,13 @@
 #define TR_BEEPCOUNTDOWN               "Đếm ngược"
 #define TR_PERSISTENT                  TR("Liên tục.", "Liên tục")
 #define TR_BACKLIGHT_LABEL             "Đèn nền"
+#define TR_STATUS_LED                  "LED trạng thái"
+#define TR_STATUS_LED_ERROR            "Lỗi"
+#define TR_STATUS_LED_READY            "Sẵn sàng"
+#define TR_STATUS_LED_EMIT             "Đang truyền"
+#define TR_STATUS_LED_COLORS_1         "Đỏ"
+#define TR_STATUS_LED_COLORS_2         "Xanh lá"
+#define TR_STATUS_LED_COLORS_3         "Xanh dương"
 #define TR_STATUS                      "Trạng thái"
 #define TR_BLONBRIGHTNESS              "BẬT độ sáng"
 #define TR_BLOFFBRIGHTNESS             "TẮT độ sáng"
